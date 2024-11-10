@@ -89,6 +89,7 @@ export const style = StyleSheet.create({
     },
     recommendations: {
         flexDirection: "row",
+        height: 260,
     },
     card: {
         width: Dimensions.get("window").width * 0.42,
@@ -96,6 +97,20 @@ export const style = StyleSheet.create({
         borderRadius: 15,
         overflow: "hidden",
         backgroundColor: "#ffffff",
+        position: "relative",
+        marginVertical: 5,
+        shadowColor: "#000",
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 5,
+    },
+    cardProducts: {
+        width: Dimensions.get("window").width * 0.30,
+        height: 160,
+        borderRadius: 15,
+        overflow: "hidden",        
+        color: "#000",
+        backgroundColor: "000",
         position: "relative",
         marginVertical: 5,
         shadowColor: "#000",
@@ -112,7 +127,7 @@ export const style = StyleSheet.create({
         position: "absolute",
         top: 5,
         left: 5,
-        width: 50,
+        width: 40,
         borderRadius: 5,
         backgroundColor: "rgba(250, 235, 215, 0.4)",
         flexDirection: "row",
@@ -156,6 +171,17 @@ export const style = StyleSheet.create({
         backgroundColor: "rgba(255, 255, 255, 0.9)",
         borderRadius: 10,
     },
+    outText: {
+        padding: 5,
+        fontSize: 14,
+        color: "#000",
+        textAlign: "center",
+    },
+    colProducts: {
+        flexDirection: "column",
+        width: 150,
+        height: 150,
+    },
     cardText: {
         padding: 5,
         fontSize: 14,
@@ -183,7 +209,7 @@ export const style = StyleSheet.create({
         height: 70,
         position: 'relative',
         bottom: 15,
-        backgroundColor: themes.primary, // Use your theme color
+        backgroundColor: themes.tertiary, // Use your theme color
         borderRadius: 60,
         justifyContent: 'center',
         alignItems: 'center',

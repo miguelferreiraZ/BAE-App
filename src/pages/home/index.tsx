@@ -12,9 +12,12 @@ import ClockIcon from "../../assets/clock.png";
 import PlayIcon from "../../assets/play.png";
 import HomeIcon from "../../assets/home.png";
 import HeartIcon from "../../assets/heart.png";
-import ARIcon from "../../assets/virtual_reality.png";
-import VideoIcon from "../../assets/video.png";
-import ProfileIcon from "../../assets/head.png";
+import FaceIDIcon from "../../assets/faceid.png";
+import ForumIcon from "../../assets/forum.png";
+import ChatIcon from "../../assets/chat.png";
+import img1 from "../../assets/img1.jpg";
+import img2 from "../../assets/img2.jpg";
+import img3 from "../../assets/img3.jpg";
 
 export default function Home() {
     return (
@@ -52,6 +55,7 @@ export default function Home() {
                 contentContainerStyle={{
                     gap: 15,
                     flexGrow: 0,
+                    paddingBottom: 0,
 
                 }}
             >
@@ -111,8 +115,8 @@ export default function Home() {
                 
             </ScrollView>
 
-            <Text>Hello world</Text>
             <Text style={style.sectionTitle}>Products</Text>
+
             <ScrollView 
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
@@ -122,6 +126,23 @@ export default function Home() {
                     gap: 15
                 }}
             >
+                <View style={style.colProducts}>
+                    <View style={style.cardProducts}>
+                        <Image source={img1} style={style.cardImage} />
+                    </View>
+                </View>
+                
+                <View style={style.colProducts}>
+                    <View style={style.cardProducts}>
+                        <Image source={img2} style={style.cardImage} />
+                    </View>
+                </View>
+
+                <View style={style.colProducts}>
+                    <View style={style.cardProducts}>
+                        <Image source={img3} style={style.cardImage} />
+                    </View>
+                </View>
 
             </ScrollView>
                 
@@ -137,14 +158,14 @@ export default function Home() {
                 
                 {/* Center AR Icon */}
                 <View style={style.centerIcon}>
-                    <Image source={ARIcon} style={style.centerIconImage} />
+                    <Image source={FaceIDIcon} style={style.centerIconImage} />
                 </View>
                 
-                {/* Video Icon */}
-                <Image source={VideoIcon} style={style.navbarIcon} />
+                {/* Forum Icon */}
+                <Image source={ForumIcon} style={style.navbarIcon} />
                 
                 {/* Profile Icon */}
-                <Image source={ProfileIcon} style={style.navbarIcon} />
+                <Image source={ChatIcon} style={style.navbarIcon} />
             </View>
         </View>
     );
