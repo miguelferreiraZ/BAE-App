@@ -89,7 +89,12 @@ export const style = StyleSheet.create({
     },
     recommendations: {
         flexDirection: "row",
-        height: 260,
+        height: 140,
+    },
+    recommendationsProducts: {
+        flexDirection: "row",
+        height: 150,
+        width: "100%",
     },
     card: {
         width: Dimensions.get("window").width * 0.42,
@@ -127,7 +132,7 @@ export const style = StyleSheet.create({
         position: "absolute",
         top: 5,
         left: 5,
-        width: 40,
+        width: 45,
         borderRadius: 5,
         backgroundColor: "rgba(250, 235, 215, 0.4)",
         flexDirection: "row",
@@ -178,9 +183,9 @@ export const style = StyleSheet.create({
         textAlign: "center",
     },
     colProducts: {
-        flexDirection: "column",
-        width: 150,
-        height: 150,
+        flexDirection: "row",
+        width: "100%",
+        height: 50,
     },
     cardText: {
         padding: 5,
@@ -196,21 +201,28 @@ export const style = StyleSheet.create({
         height: 60,
         backgroundColor: "#faedde",
         flexDirection: "row",
-        justifyContent: "space-around",
         alignItems: "center",
+        paddingHorizontal: 10,
     },
     navbarIcon: {
         width: 24,
         height: 24,
-        borderRadius: 12,
+    },
+    iconBox: {
+        width: "20%",
+        height: "100%",
+        borderRadius: 15,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#faedde",
     },
     centerIcon: {
-        width: 70,
+        width: "20%",
         height: 70,
         position: 'relative',
         bottom: 15,
-        backgroundColor: themes.tertiary, // Use your theme color
-        borderRadius: 60,
+        backgroundColor: themes.tertiary,
+        borderRadius: 35,
         justifyContent: 'center',
         alignItems: 'center',
         // Optional: Add elevation/shadow
@@ -219,10 +231,5 @@ export const style = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         elevation: 5,
-    },
-    centerIconImage: {
-        width: 35, // Half of container size
-        height: 35,
-        resizeMode: 'contain', // Maintains aspect ratio
     },
 });

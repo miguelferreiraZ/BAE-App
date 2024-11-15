@@ -1,7 +1,8 @@
 import React from "react";
-import { Text, View, Image, ScrollView } from "react-native";
+import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { style } from "./styles";
 import { themes } from "../../global/themes";
+import {Ionicons} from "@expo/vector-icons";
 
 import LogoIcon from "../../assets/logo.png";
 import MakeCard from "../../assets/makeup.png";
@@ -10,11 +11,6 @@ import SkinCard from "../../assets/sunscreen.png";
 import LeafIcon from "../../assets/leaf.png";
 import ClockIcon from "../../assets/clock.png";
 import PlayIcon from "../../assets/play.png";
-import HomeIcon from "../../assets/home.png";
-import HeartIcon from "../../assets/heart.png";
-import FaceIDIcon from "../../assets/faceid.png";
-import ForumIcon from "../../assets/forum.png";
-import ChatIcon from "../../assets/chat.png";
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
 import img3 from "../../assets/img3.jpg";
@@ -25,7 +21,7 @@ export default function Home() {
             {/* nome, pontos e logo */}
             <View style={style.header}>
                 <View>
-                    <Text style={style.greeting}>Hello Mariuska,</Text>
+                    <Text style={style.greeting}>Hello Amarildo,</Text>
                     <Text style={style.points}>2,648 points</Text>
                 </View>
                 <Image source={LogoIcon} style={style.profileImage} />
@@ -56,7 +52,6 @@ export default function Home() {
                     gap: 15,
                     flexGrow: 0,
                     paddingBottom: 0,
-
                 }}
             >
             
@@ -120,29 +115,24 @@ export default function Home() {
             <ScrollView 
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
-                style={style.recommendations}
+                style={style.recommendationsProducts}
                 contentContainerStyle={{
-                    paddingHorizontal: 10,
-                    gap: 15
+                    flexGrow: 0,
+                    gap: 25,
                 }}
             >
-                <View style={style.colProducts}>
-                    <View style={style.cardProducts}>
-                        <Image source={img1} style={style.cardImage} />
-                    </View>
+            
+                <View style={style.cardProducts}>
+                    <Image source={img1} style={style.cardImage} />
                 </View>
+                <View style={style.cardProducts}>
+                    <Image source={img2} style={style.cardImage} />
+                </View>
+                <View style={style.cardProducts}>
+                    <Image source={img3} style={style.cardImage} />
+                </View>
+            
                 
-                <View style={style.colProducts}>
-                    <View style={style.cardProducts}>
-                        <Image source={img2} style={style.cardImage} />
-                    </View>
-                </View>
-
-                <View style={style.colProducts}>
-                    <View style={style.cardProducts}>
-                        <Image source={img3} style={style.cardImage} />
-                    </View>
-                </View>
 
             </ScrollView>
                 
@@ -151,21 +141,53 @@ export default function Home() {
 
             <View style={style.navbar}>
                 {/* Home Icon */}
-                <Image source={HomeIcon} style={style.navbarIcon} />
-                
+                <TouchableOpacity style={style.iconBox}>
+                    <Ionicons 
+                        name="home-outline"
+                        color={themes.tertiary}
+                        size={20}
+                    />
+                    
+                </TouchableOpacity>
+
                 {/* Heart Icon */}
-                <Image source={HeartIcon} style={style.navbarIcon} />
+                <TouchableOpacity style={style.iconBox}>
+                    <Ionicons 
+                        name="heart-outline"
+                        color={themes.tertiary}
+                        size={22}
+                    />
+                    
+                </TouchableOpacity>
                 
                 {/* Center AR Icon */}
-                <View style={style.centerIcon}>
-                    <Image source={FaceIDIcon} style={style.centerIconImage} />
-                </View>
+                <TouchableOpacity style={style.centerIcon}>
+                    <Ionicons 
+                        name="scan-outline"
+                        color={themes.light_primary}
+                        size={30}
+                    />
+                </TouchableOpacity>
                 
-                {/* Forum Icon */}
-                <Image source={ForumIcon} style={style.navbarIcon} />
+                {/* forum Icon */}
+                <TouchableOpacity style={style.iconBox}>
+                    <Ionicons 
+                        name="chatbox-ellipses-outline"
+                        color={themes.tertiary}
+                        size={22}
+                    />
+                    
+                </TouchableOpacity>
                 
-                {/* Profile Icon */}
-                <Image source={ChatIcon} style={style.navbarIcon} />
+                {/* chat Icon */}
+                <TouchableOpacity style={style.iconBox}>
+                    <Ionicons 
+                        name="chatbubbles-outline"
+                        color={themes.tertiary}
+                        size={22}
+                    />
+                    
+                </TouchableOpacity>
             </View>
         </View>
     );
