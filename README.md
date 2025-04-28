@@ -1,4 +1,4 @@
-# B.A.E. - Projeto de Hackathon MJV
+# B.A.E. - Projeto Vencedor do Hackathon MJV
 
 ## Visão Geral
 
